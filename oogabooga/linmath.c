@@ -131,6 +131,11 @@ inline Vector4 v4_divf(LMATH_ALIGN Vector4 a, float32 s) {
 inline float32 v2_length(LMATH_ALIGN Vector2 a) {
 	return sqrt(a.x*a.x + a.y*a.y);
 }
+
+inline float v2_dist(Vector2 a, Vector2 b) {
+    return v2_length(v2_sub(a, b));
+}
+
 inline Vector2 v2_normalize(LMATH_ALIGN Vector2 a) {
     float32 length = v2_length(a);
     if (length == 0) {
